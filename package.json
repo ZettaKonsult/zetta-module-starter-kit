@@ -8,13 +8,13 @@
     "start": "node src/index",
     "test": "jest --color",
     "test:watch": "yarn run test --watch",
-    "format":
-      "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
+    "format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
     "precommit": "lint-staged"
   },
   "devDependencies": {
     "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.12.0",
     "eslint-config-prettier": "^2.9.0",
     "flow-bin": "^0.59.0",
@@ -24,8 +24,13 @@
     "prettier": "^1.8.2"
   },
   "lint-staged": {
-    "*.js": ["prettier --trailing-comma es5 --single-quote --write", "git add"],
-    "yarn.lock": ["git rm --cached"]
+    "*.js": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ],
+    "yarn.lock": [
+      "git rm --cached"
+    ]
   },
   "jest": {
     "transform": {
