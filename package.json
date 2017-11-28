@@ -8,10 +8,12 @@
     "start": "node src/index",
     "test": "jest --color",
     "test:watch": "yarn run test --watch",
+    "build": "babel src -d lib",
     "format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
     "precommit": "lint-staged"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",

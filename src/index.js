@@ -1,4 +1,6 @@
-const foo = () => {
+/* @flow */
+
+const foo = (): string => {
   return 'foo';
 };
 
