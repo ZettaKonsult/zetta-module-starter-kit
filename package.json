@@ -9,8 +9,7 @@
     "test": "jest --color",
     "test:watch": "yarn run test --watch",
     "build": "babel src -d lib",
-    "format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged && yarn run test"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -26,13 +25,11 @@
     "prettier": "^1.8.2"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --trailing-comma es5 --single-quote --write",
+    "*.{js,json}": [
+      "prettier --trailing-comma es5 --single-quote --no-semi --write",
       "git add"
     ],
-    "yarn.lock": [
-      "git rm --cached"
-    ]
+    "yarn.lock": ["git rm --cached"]
   },
   "jest": {
     "transform": {
