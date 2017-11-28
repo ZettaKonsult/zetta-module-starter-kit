@@ -28,10 +28,12 @@
     "prettier": "^1.8.2"
   },
   "lint-staged": {
-    "*.{js,json}": [
+    "*.{js}": [
       "prettier --trailing-comma es5 --single-quote --no-semi --write",
+      "yarn run lint",
       "git add"
     ],
+    "*.json": ["prettier --write", "git add"],
     "yarn.lock": ["git rm --cached"]
   },
   "jest": {
