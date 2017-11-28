@@ -10,6 +10,7 @@
     "test:watch": "yarn run test --watch",
     "build": "babel src -d lib",
     "lint": "eslint src/**/*.js",
+    "travis:test": "jest",
     "precommit": "lint-staged && yarn run test"
   },
   "devDependencies": {
