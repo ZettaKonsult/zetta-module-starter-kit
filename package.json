@@ -1,14 +1,14 @@
 {
   "name": "zetta-module-starter-kit",
   "version": "1.0.0",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "author": "Fredrik Palmquist <fiddep@telia.com>",
   "license": "MIT",
   "scripts": {
     "start": "node src/index",
     "test": "jest --color",
     "test:watch": "yarn run test --watch",
-    "build": "babel src -d lib",
+    "build": "babel src -d dist",
     "lint": "eslint src/**/*.js",
     "travis:test": "jest",
     "prepublish": "yarn run build",

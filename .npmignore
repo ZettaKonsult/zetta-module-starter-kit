@@ -1,1 +1,2 @@
-# If specific folders should not be pushed to npm, add them here
+# src folder ignored, so that the dist folder will be pushed instead to npm
+src
