@@ -4,6 +4,10 @@
   "main": "dist/index.js",
   "author": "Fredrik Palmquist <fiddep@telia.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZettaKonsult/zk-open-modules.git"
+  },
   "scripts": {
     "start": "node src/index",
     "test": "jest --color",
